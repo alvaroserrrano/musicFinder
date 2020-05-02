@@ -3,20 +3,23 @@ import './App.css';
 import Navbar from './components/layout/Navbar';
 import Index from './components/layout/Index';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ContextController } from './context';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Fragment className='App'>
-        <Navbar />
-        <div className='container'>
-          <Switch>
-            <Route exact path='/' component={Index} />
-          </Switch>
-        </div>
-      </Fragment>
-    </Router>
+    <ContextController>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <div className='container'>
+            <Switch>
+              <Route exact path='/' component={Index} />
+            </Switch>
+          </div>
+        </Fragment>
+      </Router>
+    </ContextController>
   );
-}
+};
 
 export default App;

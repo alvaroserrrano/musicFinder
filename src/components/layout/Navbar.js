@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Navbar = props => {
   return (
@@ -8,7 +7,5 @@ const Navbar = props => {
     </nav>
   );
 };
-
-Navbar.propTypes = {};
 
 export default Navbar;

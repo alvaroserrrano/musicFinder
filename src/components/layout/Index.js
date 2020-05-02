@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import Tracks from '../tracks/Tracks';
-import PropTypes from 'prop-types';
-
+import Search from '../tracks/Search';
 const Index = props => {
   return (
     <Fragment>
+      <Search></Search>
       <Tracks />
     </Fragment>
   );
